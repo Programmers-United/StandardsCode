@@ -1,0 +1,49 @@
+# Project: Projeto1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = AutomatedSystem.o ConcreteSom.o Som.o main.o Tv.o ConcreteTv.o ArCondicionado.o ConcreteAr.o
+LINKOBJ  = AutomatedSystem.o ConcreteSom.o Som.o main.o Tv.o ConcreteTv.o ArCondicionado.o ConcreteAr.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Projeto1.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+AutomatedSystem.o: AutomatedSystem.cpp
+	$(CPP) -c AutomatedSystem.cpp -o AutomatedSystem.o $(CXXFLAGS)
+
+ConcreteSom.o: ConcreteSom.cpp
+	$(CPP) -c ConcreteSom.cpp -o ConcreteSom.o $(CXXFLAGS)
+
+Som.o: Som.cpp
+	$(CPP) -c Som.cpp -o Som.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Tv.o: Tv.cpp
+	$(CPP) -c Tv.cpp -o Tv.o $(CXXFLAGS)
+
+ConcreteTv.o: ConcreteTv.cpp
+	$(CPP) -c ConcreteTv.cpp -o ConcreteTv.o $(CXXFLAGS)
+
+ArCondicionado.o: ArCondicionado.cpp
+	$(CPP) -c ArCondicionado.cpp -o ArCondicionado.o $(CXXFLAGS)
+
+ConcreteAr.o: ConcreteAr.cpp
+	$(CPP) -c ConcreteAr.cpp -o ConcreteAr.o $(CXXFLAGS)
