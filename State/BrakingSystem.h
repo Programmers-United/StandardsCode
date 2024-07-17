@@ -5,14 +5,13 @@
 
 class BrakingSystem {
 private:
-    State state;
-
+    State* currentState;
 public:
+    BrakingSystem(State* state);
     BrakingSystem();
-    BrakingSystem(State state);
-    void setStatus(State state);
+    ~BrakingSystem();
     void getInfo();
     void nextState();
 };
 
-#endif
+#endif 

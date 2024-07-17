@@ -3,8 +3,11 @@
 
 class State{
 public:
-    virtual void verifyStatus();
-    virtual State next();
+    virtual ~State() = 0;
+    virtual void verifyStatus() = 0;
+    virtual State* next() = 0;
 };
+
+inline State::~State() {}
 
 #endif

@@ -13,6 +13,6 @@ void Red::verifyStatus() {
     cout << "Preste atenção o sinal está fechando!\n";
 }
 
-State Red::next() {
-    return Green();
+State* Red::next() {
+    return new Green();
 }

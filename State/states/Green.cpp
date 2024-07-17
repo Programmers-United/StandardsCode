@@ -11,6 +11,6 @@ void Green::verifyStatus() {
     cout << "Sistema de freios desabilitado...\n";
 }
 
-State Green::next() {
-    return Yellow();
+State* Green::next() {
+    return new Yellow();
 }

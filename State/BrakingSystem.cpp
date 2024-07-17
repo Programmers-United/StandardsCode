@@ -1,23 +1,25 @@
 #include "BrakingSystem.h"
-#include "states/State.h"
 #include "states/Green.h"
+#include <iostream>
+
+BrakingSystem::BrakingSystem(State *state) {
+    this->currentState = state;
+}
 
 BrakingSystem::BrakingSystem() {
-    this->state = Green();
+    this->currentState = new Green();
 }
 
-BrakingSystem::BrakingSystem(State state) {
-    this->state = state;
-}
-
-void BrakingSystem::setStatus(State state) {
-    this->state = state;
+BrakingSystem::~BrakingSystem() {
+    delete currentState;
 }
 
 void BrakingSystem::getInfo() {
-    this->state.verifyStatus();
+    currentState->verifyStatus();
 }
 
 void BrakingSystem::nextState() {
-    this->state.next();
+    State *newState = currentState->next();
+    delete currentState;
+    currentState = newState;
 }

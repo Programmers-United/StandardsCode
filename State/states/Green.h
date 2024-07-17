@@ -6,8 +6,8 @@
 class Green : public State {
 public:
     Green();
-    void verifyStatus();
-    State next();
+    void verifyStatus() override;
+    State* next() override;
 };
 
 #endif
