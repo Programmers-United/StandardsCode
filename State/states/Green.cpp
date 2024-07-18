@@ -7,8 +7,10 @@ using namespace std;
 Green::Green() {}
 
 void Green::verifyStatus() {
-    cout << "\nCor do semáfaro identificado: Verde\n";
+    cout << "\n--------------------------------------\n";
+    cout << "Cor do semáfaro identificado: Verde\n";
     cout << "Sistema de freios desabilitado...\n";
+    cout << "---------------------------------------\n";
 }
 
 State* Green::next() {

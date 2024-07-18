@@ -7,10 +7,12 @@ using namespace std;
 Red::Red() {}
 
 void Red::verifyStatus() {
-    cout << "\nCor do semáfaro identificado: Vermelho\n";
+    cout << "\n--------------------------------------\n";
+    cout << "Cor do semáfaro identificado: Vermelho\n";
     cout << "Sistema de freios ativado...\n";
     cout << "Freando levemente...\n";
     cout << "Preste atenção o sinal está fechando!\n";
+    cout << "---------------------------------------\n";
 }
 
 State* Red::next() {
