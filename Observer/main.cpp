@@ -17,6 +17,7 @@ int main() {
 
     doorman.notifyObservers();
 
+    // Event happened
     doorman.setEventHappened(true);
 
     doorman.notifyObservers();
