@@ -4,5 +4,7 @@
 using namespace std;
 
 void Girlfriend::notify() {
-    cout << "A Namorada está sendo notificada por mensagem...\n";
+    cout << "\nA Namorada está sendo notificada por mensagem...\n";
+    cout << "Apagar luzes...\n";
+    cout << "Preparar para dizer surpresa...\n";
 }
